@@ -88,8 +88,8 @@ function sendEmailNotification(accepted = true, callback) {
         return;
     }
 
-    const templateverifiedEmail || config.email.recipientEmail, // Use verified email or fallback
-        to_email: config.email.recipientEmail,
+    const templateParams = {
+        to_email: verifiedEmail || config.email.recipientEmail, // Use verified email or fallback
         valentine_name: config.valentineName,
         response: accepted ? 'ĐÃ ĐỒNG Ý ❤️' : 'Từ chối 💔',
         love_percentage: currentLovePercentage + '%',
