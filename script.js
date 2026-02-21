@@ -13,7 +13,7 @@ function initializeEmailJS() {
 }
 
 // Email verification function
-function verifyEmail() {
+window.verifyEmail = function() {
     console.log('verifyEmail called');
     const emailInput = document.getElementById('emailInput');
     const emailError = document.getElementById('emailError');
@@ -52,7 +52,7 @@ function verifyEmail() {
 }
 
 // Manual email send function (called by button)
-function sendEmailManually() {
+window.sendEmailManually = function() {
     const btn = document.getElementById('sendEmailBtn');
     const status = document.getElementById('emailStatus');
     
@@ -229,13 +229,13 @@ function setRandomPosition(element) {
 }
 
 // Function to show next question
-function showNextQuestion(questionNumber) {
+window.showNextQuestion = function(questionNumber) {
     document.querySelectorAll('.question-section').forEach(q => q.classList.add('hidden'));
     document.getElementById(`question${questionNumber}`).classList.remove('hidden');
 }
 
 // Function to move the "No" button when clicked
-function moveButton(button) {
+window.moveButton = function(button) {
     const x = Math.random() * (window.innerWidth - button.offsetWidth);
     const y = Math.random() * (window.innerHeight - button.offsetHeight);
     button.style.position = 'fixed';
@@ -289,7 +289,7 @@ window.addEventListener('DOMContentLoaded', setInitialPosition);
 window.addEventListener('load', setInitialPosition);
 
 // Celebration function
-function celebrate() {
+window.celebrate = function() {
     document.querySelectorAll('.question-section').forEach(q => q.classList.add('hidden'));
     const celebration = document.getElementById('celebration');
     celebration.classList.remove('hidden');
