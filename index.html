@@ -31,8 +31,17 @@
             </audio>
         </div>
 
+        <!-- Email Verification -->
+        <div class="question-section" id="emailVerification">
+            <h2>💌 Xác nhận email</h2>
+            <p>Vui lòng nhập email của bạn để tiếp tục</p>
+            <input type="email" id="emailInput" class="email-input" placeholder="Nhập email của bạn...">
+            <p class="error-message hidden" id="emailError">❌ Email không hợp lệ! Chỉ Hải Anh mới được phép truy cập.</p>
+            <button class="cute-btn" onclick="verifyEmail()">Xác nhận ✓</button>
+        </div>
+
         <!-- First Question -->
-        <div class="question-section" id="question1">
+        <div class="question-section hidden" id="question1">
             <h2 id="question1Text"></h2>
             <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1"></button>
             <button class="cute-btn" onclick="moveButton(this)" id="noBtn1"></button>

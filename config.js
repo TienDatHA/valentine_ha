@@ -69,6 +69,15 @@ const CONFIG = {
         volume: 0.5
     },
 
+    // Email verification settings
+    emailVerification: {
+        enabled: true,                              // Enable email verification
+        allowedEmails: [
+            "haianhvuhoang9596@gmail.com",
+            "21021574@vnu.edu.vn"
+        ]
+    },
+
     // Email notification settings (using EmailJS)
     email: {
         enabled: true,                              // Enable/disable email feature

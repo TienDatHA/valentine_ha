@@ -12,6 +12,32 @@ function initializeEmailJS() {
     }
 }
 
+// Email verification function
+function verifyEmail() {
+    const emailInput = document.getElementById('emailInput');
+    const emailError = document.getElementById('emailError');
+    const email = emailInput.value.trim().toLowerCase();
+    
+    if (!config.emailVerification.enabled) {
+        showNextQuestion(1);
+        return;
+    }
+    
+    const allowedEmails = config.emailVerification.allowedEmails.map(e => e.toLowerCase());
+    
+    if (allowedEmails.includes(email)) {
+        emailError.classList.add('hidden');
+        document.getElementById('emailVerification').classList.add('hidden');
+        document.getElementById('question1').classList.remove('hidden');
+    } else {
+        emailError.classList.remove('hidden');
+        emailInput.classList.add('shake');
+        setTimeout(() => {
+            emailInput.classList.remove('shake');
+        }, 500);
+    }
+}
+
 // Manual email send function (called by button)
 function sendEmailManually() {
     const btn = document.getElementById('sendEmailBtn');
