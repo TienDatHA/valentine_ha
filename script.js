@@ -188,6 +188,22 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('yesBtn3').textContent = config.questions.third.yesBtn;
     document.getElementById('noBtn3').textContent = config.questions.third.noBtn;
 
+    // Setup email verification
+    const verifyBtn = document.getElementById('verifyEmailBtn');
+    const emailInput = document.getElementById('emailInput');
+    
+    if (verifyBtn) {
+        verifyBtn.addEventListener('click', verifyEmail);
+    }
+    
+    if (emailInput) {
+        emailInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                verifyEmail();
+            }
+        });
+    }
+
     // Create initial floating elements
     createFloatingElements();
 
