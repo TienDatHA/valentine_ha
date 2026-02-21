@@ -35,9 +35,9 @@
         <div class="question-section" id="emailVerification">
             <h2>💌 Xác nhận email</h2>
             <p>Vui lòng nhập email của bạn để tiếp tục</p>
-            <input type="email" id="emailInput" class="email-input" placeholder="Nhập email của bạn...">
+            <input type="email" id="emailInput" class="email-input" placeholder="Nhập email của bạn..." onkeypress="if(event.key === 'Enter') verifyEmail()">
             <p class="error-message hidden" id="emailError">❌ Email không hợp lệ! Chỉ Hải Anh mới được phép truy cập.</p>
-            <button class="cute-btn" onclick="verifyEmail()">Xác nhận ✓</button>
+            <button class="cute-btn" id="verifyEmailBtn" onclick="verifyEmail()">Xác nhận ✓</button>
         </div>
 
         <!-- First Question -->

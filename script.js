@@ -14,22 +14,35 @@ function initializeEmailJS() {
 
 // Email verification function
 function verifyEmail() {
+    console.log('verifyEmail called');
     const emailInput = document.getElementById('emailInput');
     const emailError = document.getElementById('emailError');
-    const email = emailInput.value.trim().toLowerCase();
     
-    if (!config.emailVerification.enabled) {
-        showNextQuestion(1);
+    if (!emailInput) {
+        console.error('Email input not found');
+        return;
+    }
+    
+    const email = emailInput.value.trim().toLowerCase();
+    console.log('Email entered:', email);
+    
+    if (!config.emailVerification || !config.emailVerification.enabled) {
+        console.log('Email verification disabled');
+        document.getElementById('emailVerification').classList.add('hidden');
+        document.getElementById('question1').classList.remove('hidden');
         return;
     }
     
     const allowedEmails = config.emailVerification.allowedEmails.map(e => e.toLowerCase());
+    console.log('Allowed emails:', allowedEmails);
     
     if (allowedEmails.includes(email)) {
+        console.log('Email verified successfully');
         emailError.classList.add('hidden');
         document.getElementById('emailVerification').classList.add('hidden');
         document.getElementById('question1').classList.remove('hidden');
     } else {
+        console.log('Email verification failed');
         emailError.classList.remove('hidden');
         emailInput.classList.add('shake');
         setTimeout(() => {
