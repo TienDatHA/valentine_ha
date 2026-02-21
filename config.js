@@ -84,7 +84,7 @@ const CONFIG = {
         serviceId: "service_fcw1tn8",               // Your EmailJS Service ID
         templateId: "template_wwbnwi3",             // Your EmailJS Template ID
         publicKey: "M9VUXVczhlW5YMy1o",             // Your EmailJS Public Key
-        recipientEmail: "phamtiendat05122003@gmail.com", // Email to receive notification
+        recipientEmail: "haianhvuhoang9596@gmail.com", // Email to receive notification
         sendOnAccept: false,                        // Send email when they click "Yes" (changed to false for manual send)
         includeDetails: true                        // Include love meter percentage in email
     }
