@@ -4,6 +4,9 @@ const config = window.VALENTINE_CONFIG;
 // Store love meter value globally for email
 let currentLovePercentage = 100;
 
+// Store verified email globally
+let verifiedEmail = null;
+
 // Initialize EmailJS
 function initializeEmailJS() {
     if (config.email && config.email.enabled && typeof emailjs !== 'undefined') {
@@ -38,6 +41,7 @@ window.verifyEmail = function() {
     
     if (allowedEmails.includes(email)) {
         console.log('Email verified successfully');
+        verifiedEmail = email; // Save verified email
         emailError.classList.add('hidden');
         document.getElementById('emailVerification').classList.add('hidden');
         document.getElementById('question1').classList.remove('hidden');
@@ -65,7 +69,7 @@ window.sendEmailManually = function() {
     sendEmailNotification(true, function(success) {
         if (success) {
             btn.textContent = '✅ Đã gửi!';
-            status.textContent = '✅ Email đã được gửi thành công đến ' + config.email.recipientEmail;
+            status.textContent = '✅ Email đã được gửi thành công đến ' + (verifiedEmail || config.email.recipientEmail);
             status.style.color = '#4CAF50';
         } else {
             btn.disabled = false;
@@ -84,7 +88,7 @@ function sendEmailNotification(accepted = true, callback) {
         return;
     }
 
-    const templateParams = {
+    const templateverifiedEmail || config.email.recipientEmail, // Use verified email or fallback
         to_email: config.email.recipientEmail,
         valentine_name: config.valentineName,
         response: accepted ? 'ĐÃ ĐỒNG Ý ❤️' : 'Từ chối 💔',
