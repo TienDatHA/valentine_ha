@@ -6,7 +6,7 @@ const CONFIG = {
 
     valentineName: "Hải Anh",
 
-    pageTitle: "Hải Anh có thể làm Valentine của anh không? 💝",
+    pageTitle: "Anh có một điều muốn hỏi em 💝",
 
     floatingEmojis: {
         hearts: ['❤️', '💖', '💝', '💗', '💓'],
@@ -16,32 +16,32 @@ const CONFIG = {
 
     questions: {
         first: {
-            text: "Hải Anh có một chút tình cảm với anh không?",
+            text: "Em có yêu anh không?",
             yesBtn: "Có chứ ❤️",
             noBtn: "Không đâu",
-            secretAnswer: "Thật ra anh thích Hải Anh nhiều lắm đó 💖"
+            secretAnswer: "Em yêu anh nhiều hơn anh nghĩ đó 💖"
         },
         second: {
-            text: "Nếu yêu anh, thì yêu anh bao nhiêu?",
-            startText: "Yêu đến mức này nè:",
-            nextBtn: "Tiếp tục nha 💕"
+            text: "Em yêu anh nhiều bao nhiêu?",
+            startText: "Em yêu anh đến mức:",
+            nextBtn: "Tiếp theo 💕"
         },
         third: {
-            text: "Hải Anh có đồng ý làm Valentine của anh không? 🌹",
-            yesBtn: "Đồng ý 💘",
-            noBtn: "Cho anh suy nghĩ thêm..."
+            text: "Em có muốn mãi mãi ở bên anh không? 🌹",
+            yesBtn: "Em muốn 💘",
+            noBtn: "Để em suy nghĩ thêm..."
         }
     },
 
     loveMessages: {
-        extreme: "Trời ơi nhiều vậy luôn sao? Anh sắp tan chảy rồi đó 🥰🚀💝",
-        high: "Nhiều hơn anh tưởng luôn đó! 💖✨",
-        normal: "Vậy thôi là anh vui lắm rồi 🥰"
+        extreme: "Nhiều đến mức em không đếm nổi luôn đó 🥰🚀💝",
+        high: "Yêu anh hơn tất cả mọi thứ trên đời 💖✨",
+        normal: "Chỉ cần được ở bên anh là đủ rồi 🥰"
     },
 
     celebration: {
-        title: "Yayyy! Anh hạnh phúc nhất trên đời rồi! 🎉💖💝",
-        message: "Vậy từ giờ Hải Anh chính thức là Valentine của anh nhé! Anh xin một cái ôm thật ấm áp đó nha 🤗💋",
+        title: "Anh chính thức thuộc về em rồi đó! 🎉💖💝",
+        message: "Valentine này và cả sau này nữa… em vẫn muốn được nắm tay anh thật chặt và cùng anh đi qua mọi điều 🤗💋",
         emojis: "🎁💖🤗💝💋❤️💕🦆"
     },
 
@@ -64,29 +64,27 @@ const CONFIG = {
         enabled: true,
         autoplay: false,
         musicUrl: "https://res.cloudinary.com/dkdn7ibpw/video/upload/v1771689696/1_snmfc7.mp3",
-        startText: "🎵 Bật nhạc cho anh nghe",
+        startText: "🎵 Bật nhạc cho em nghe",
         stopText: "🔇 Tắt nhạc",
         volume: 0.5
     },
 
-    // Email verification settings
     emailVerification: {
-        enabled: true,                              // Enable email verification
+        enabled: true,
         allowedEmails: [
             "haianhvuhoang9596@gmail.com",
             "21021574@vnu.edu.vn"
         ]
     },
 
-    // Email notification settings (using EmailJS)
     email: {
-        enabled: true,                              // Enable/disable email feature
-        serviceId: "service_fcw1tn8",               // Your EmailJS Service ID
-        templateId: "template_wwbnwi3",             // Your EmailJS Template ID
-        publicKey: "M9VUXVczhlW5YMy1o",             // Your EmailJS Public Key
-        recipientEmail: "haianhvuhoang9596@gmail.com", // Email to receive notification
-        sendOnAccept: false,                        // Send email when they click "Yes" (changed to false for manual send)
-        includeDetails: true                        // Include love meter percentage in email
+        enabled: true,
+        serviceId: "service_fcw1tn8",
+        templateId: "template_wwbnwi3",
+        publicKey: "M9VUXVczhlW5YMy1o",
+        recipientEmail: "haianhvuhoang9596@gmail.com",
+        sendOnAccept: false,
+        includeDetails: true
     }
 };
 
